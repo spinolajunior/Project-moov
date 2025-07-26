@@ -4,6 +4,7 @@ package com.robertojr.api
 import com.robertojr.moov.model.Login
 import com.robertojr.moov.model.User
 import retrofit2.Call
+import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.DELETE
 
@@ -24,7 +25,7 @@ interface LoginApi {
     suspend fun insert(@Body login:Login): Call<Login>
 
     @POST("logins/validate")
-    suspend fun validateLogin(@Body login:Login): User
+    suspend fun validateLogin(@Body login:Login): Response<User>
 
     @PUT("logins/{id}")
     suspend fun updateById(@Body login:Login , @Path("id") id:Long): Call<Login>

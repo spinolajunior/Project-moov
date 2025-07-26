@@ -5,5 +5,5 @@ data class Login(
     val id: Int?,
     val password: String?,
     val userId: Int?,
-    val username: String?
+    val userName: String?
 )

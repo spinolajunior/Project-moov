@@ -1,12 +1,22 @@
 package com.robertojr.moov.model
 
-data class Customer(
-    val ager: Int,
-    val credentialID: Int,
-    val description: String,
-    val id: Int,
-    val lastName: String,
-    val name: String,
-    val phone: String,
-    val photoProfile: String
-)
+class Customer() : User(){
+
+    var reserves : List<Long>? = null
+
+    constructor(id:Long,name:String,lastName:String,ager:Int,credentialId:Long,
+                phone:String,photoProfile:String,description:String,reserves:List<Long>):this(){
+                    this.id = id
+                    this.name = name
+                    this.lastName = lastName
+                    this.ager = ager
+                    this.credentialId = credentialId
+                    this.phone = phone
+                    this.photoProfile = photoProfile
+                    this.description = description
+                    this.reserves = reserves
+
+                }
+}
+
+

@@ -1,3 +1,6 @@
 package com.robertojr.util
 
-var stringGlobal = "teste"
+import com.robertojr.moov.model.User
+
+
+lateinit var userSection:User

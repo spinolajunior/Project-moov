@@ -14,22 +14,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Moov">
         <activity
+            android:name="com.robertojr.ui.CriarContaActivity3"
+            android:exported="false" />
+        <activity
+            android:name="com.robertojr.ui.MapsHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.robertojr.ui.CriarContaActivity2"
+            android:exported="false" />
+        <activity
+            android:name="com.robertojr.ui.CriarContaActivity1"
+            android:exported="false" />
+        <activity
             android:name="com.robertojr.ui.SplashScreenActivity"
             android:exported="true">
-
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
         <activity
             android:name="com.robertojr.ui.LoginActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

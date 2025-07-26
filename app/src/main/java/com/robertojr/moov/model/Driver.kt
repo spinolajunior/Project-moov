@@ -1,17 +1,30 @@
 package com.robertojr.moov.model
 
-data class Driver(
-    val ager: Int,
-    val available: String,
-    val carModel: String,
-    val credentialId: Int,
-    val description: String,
-    val id: Int,
-    val lastName: String,
-    val name: String,
-    val phone: String,
-    val photoProfile: String,
-    val plateNumber: String,
-    val racersId: List<Int>,
-    val ratingNumber: Double
-)
+class Driver() : User() {
+
+    var carModel: String? = null
+    var plateNumber: String? = null
+
+    var available: String? = null
+    var ratingNumber: Double? = null
+    var racersId: List<Int> = emptyList()
+
+    constructor(id: Long, name: String, lastName: String, phone: String, ager: Int, description: String, photoProfile: String,
+        credentialId: Long, carModel: String, plateNumber: String, ratingNumber: Double, available: String, racersId: List<Int>
+    ) : this() {
+        this.id = id
+        this.name = name
+        this.lastName = lastName
+        this.phone = phone
+        this.ager = ager
+        this.description = description
+        this.photoProfile = photoProfile
+        this.credentialId = credentialId
+        this.carModel = carModel
+        this.plateNumber = plateNumber
+        this.ratingNumber = ratingNumber
+        this.available = available
+        this.racersId = racersId
+
+    }
+}
