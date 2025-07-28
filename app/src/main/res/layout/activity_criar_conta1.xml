@@ -65,7 +65,7 @@
             android:textColor="@color/cinza_texto" />
 
         <EditText
-            android:id="@+id/edt_email_cadastro"
+            android:id="@+id/edt_sobrenome"
             android:layout_width="match_parent"
             android:inputType="text"
             android:layout_height="50dp"
@@ -138,7 +138,9 @@
             android:id="@+id/btn_criar_conta_avancar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:enabled="false"
             android:text="avançar"
+            android:backgroundTint="@color/btn_desativado"
             android:background="@drawable/shape_button_login"
             android:textSize="16sp"
             android:textStyle="normal"/>
@@ -168,6 +170,7 @@
                 android:layout_marginBottom="20dp"
                 android:textStyle="bold"
                 android:textSize="16sp"
+
                 android:background="@drawable/shape_button_criar_conta_login"
                 android:text="Entrar" />
 

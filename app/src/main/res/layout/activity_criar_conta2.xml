@@ -134,7 +134,8 @@
         android:padding="15dp">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_criar_conta"
+            android:enabled="false"
+            android:id="@+id/btn_criar_conta_avancar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/shape_button_criar_conta_login"

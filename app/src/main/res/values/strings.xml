@@ -7,6 +7,7 @@
     <string name="previous">Previous</string>
     <string name="cadastrar">Cadastrar</string>
     <string name="falhaLogin">Usuario ou senha invalido!</string>
+    <string name="campoIncompleto">Por favor, complete o campo corretamente</string>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
