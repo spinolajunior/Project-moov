@@ -27,6 +27,9 @@ interface LoginApi {
     @POST("logins/validate")
     suspend fun validateLogin(@Body login:Login): Response<User>
 
+    @POST("logins/validate/new_login")
+    suspend fun validateNewLogin(@Body login:Login): Response<Login>
+
     @PUT("logins/{id}")
     suspend fun updateById(@Body login:Login , @Path("id") id:Long): Call<Login>
 

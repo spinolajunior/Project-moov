@@ -24,10 +24,10 @@ class CriarContaActivity1 : AppCompatActivity() {
             var phone = binding.edtPhone.text.toString()
             var dataNascimento = binding.edtDataNascimento.text.toString()
 
-            val regexNome = nome.isNotEmpty()
-            val regexSobrenome = sobrenome.isNotEmpty()
-            val regexPhone = phone.isNotEmpty()
-            val regexDataNascimento = dataNascimento.isNotEmpty()
+            val regexNome = nome.isNotEmpty() and nome.matches(Regex("^[A-Za-zÀ-ÖØ-öø-ÿ]{2,}(\\s[A-Za-zÀ-ÖØ-öø-ÿ]{2,})*\$"))
+            val regexSobrenome = sobrenome.isNotEmpty() and sobrenome.matches(Regex("^[A-Za-zÀ-ÖØ-öø-ÿ]{2,}(\\s[A-Za-zÀ-ÖØ-öø-ÿ]{2,})*\$"))
+            val regexPhone = phone.isNotEmpty() and phone.matches(Regex("^\\(?\\d{2}\\)?[\\s-]?9\\d{4}-?\\d{4}\$"))
+            val regexDataNascimento = dataNascimento.isNotEmpty() and dataNascimento.matches(Regex("^\\d{2}/\\d{2}/\\d{4}\$"))
 
             val validate = regexNome and regexSobrenome and regexPhone and regexDataNascimento
             binding.btnCriarContaAvancar.isEnabled = validate
@@ -37,10 +37,10 @@ class CriarContaActivity1 : AppCompatActivity() {
                     if (validate) R.color.amarelo_principal else R.color.btn_desativado
                 )
 
-            if (!regexNome) binding.edtNomeCadastro.error = getString(R.string.campoIncompleto)
-            if (!regexSobrenome) binding.edtSobrenome.error = getString(R.string.campoIncompleto)
-            if (!regexPhone) binding.edtPhone.error = getString(R.string.campoIncompleto)
-            if (!regexDataNascimento) binding.edtDataNascimento.error = getString(R.string.campoIncompleto)
+            if (!regexNome) binding.edtNomeCadastro.error = "Nome inválido. Use apenas letras e pelo menos 2 caracteres."
+            if (!regexSobrenome) binding.edtSobrenome.error = "Sobrenome inválido. Use apenas letras e pelo menos 2 caracteres."
+            if (!regexPhone) binding.edtPhone.error = "Telefone inválido. Use o formato (11) 99999-8888 ou similar."
+            if (!regexDataNascimento) binding.edtDataNascimento.error = "Data inválida. Use o formato dd/MM/aaaa com uma data real."
 
         }
 
