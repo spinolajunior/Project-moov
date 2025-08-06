@@ -2,12 +2,11 @@ package com.robertojr.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.lifecycleScope
-import com.google.gson.Gson
 import com.robertojr.moov.R
 import com.robertojr.moov.databinding.ActivityCriarConta2Binding
 import com.robertojr.moov.model.Login
@@ -76,8 +75,6 @@ class CriarContaActivity2 : AppCompatActivity() {
                     var verificar = RetrofitClient.loginRetrofit.validateNewLogin(login)
 
 
-                    val respostaBruta = verificar.errorBody()?.string() ?: verificar.body().toString()
-                    Log.d("API_RESPONSE_RAW", respostaBruta)
 
                     if (verificar.isSuccessful) {
 
@@ -94,25 +91,9 @@ class CriarContaActivity2 : AppCompatActivity() {
 
                     } else {
 
-                        val erroBodyJson = verificar.errorBody()?.string()
-                        val erroLogin = Gson().fromJson(erroBodyJson, Login::class.java)
-                        Log.d("ERRO_LOGIN", "id = ${erroLogin?.id}")
-                        Log.d("ERRO_LOGIN", "username = ${erroLogin?.userName}")
-                        Log.d("ERRO_LOGIN", "password = ${erroLogin?.password}")
-                        Log.d("ERRO_LOGIN", "email = ${erroLogin?.email}")
-                        Log.d("ERRO_LOGIN", "userId = ${erroLogin?.userId}")
-
-                        if (erroLogin?.email == null) {
-                            binding.edtEmail.error = "Este email já esta vinculado a uma conta!"
-                        }
-                        if (erroLogin?.password == null) {
-                            binding.edtSenhaCadastro.error =
-                                "Esta senha já esta vinculada a uma conta!"
-                        }
-                        if (erroLogin?.userName == null) {
-                            binding.edtUsuarioCadastro.error =
-                                "Este usuario já esta vinculado a uma conta!"
-                        }
+                        binding.txtFailureNewCredenciais.visibility = View.VISIBLE
+                        delay(500)
+                        binding.txtFailureNewCredenciais.visibility = View.INVISIBLE
                     }
 
 
@@ -123,6 +104,11 @@ class CriarContaActivity2 : AppCompatActivity() {
             }
 
 
+        }
+        binding.btnVoltarLogin.setOnClickListener {
+            val intent = Intent(this@CriarContaActivity2, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
         }
 
     }

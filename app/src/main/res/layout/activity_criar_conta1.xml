@@ -141,7 +141,7 @@
             android:enabled="false"
             android:text="avançar"
             android:backgroundTint="@color/btn_desativado"
-            android:background="@drawable/shape_button_login"
+            android:background="@drawable/shape_button_criar_conta_login"
             android:textSize="16sp"
             android:textStyle="normal"/>
 
@@ -156,7 +156,6 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
                 android:text="Já possui uma conta?"
@@ -168,9 +167,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:textStyle="bold"
                 android:textSize="16sp"
-
                 android:background="@drawable/shape_button_criar_conta_login"
                 android:text="Entrar" />
 

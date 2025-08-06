@@ -137,6 +137,7 @@
             android:id="@+id/btn_criar_conta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/btn_desativado"
             android:background="@drawable/shape_button_criar_conta_login"
             android:enabled="false"
             android:text="Criar conta" />

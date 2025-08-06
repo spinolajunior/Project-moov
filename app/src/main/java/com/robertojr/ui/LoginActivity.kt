@@ -37,6 +37,7 @@ class LoginActivity : AppCompatActivity() {
 
                     if (tryLogin.isSuccessful ){
                         Log.d("Resposta API","${tryLogin.body()?.name}")
+
                             userSection = tryLogin.body()!!
                         launch {
                             val intent = Intent(this@LoginActivity, MapsHomeActivity::class.java)

@@ -5,17 +5,17 @@ import com.google.gson.annotations.SerializedName
 data class Login(
 
     @SerializedName("email")
-    val email: String? = null,
+    val email: String?,
 
     @SerializedName("id")
     val id: Int? = null,
 
     @SerializedName("password")
-    val password: String? = null,
+    val password: String,
 
     @SerializedName("userId")
     val userId: Int? = null,
 
-    @SerializedName("username")
-    val userName: String? =null
+    @SerializedName("userName")
+    val userName: String
 )

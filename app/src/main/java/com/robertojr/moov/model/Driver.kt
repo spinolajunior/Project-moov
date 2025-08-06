@@ -7,10 +7,10 @@ class Driver() : User() {
 
     var available: String? = null
     var ratingNumber: Double? = null
-    var racersId: List<Int> = emptyList()
+    var racersId: List<Int>? = emptyList()
 
-    constructor(id: Long, name: String, lastName: String, phone: String, ager: Int, description: String, photoProfile: String,
-        credentialId: Long, carModel: String, plateNumber: String, ratingNumber: Double, available: String, racersId: List<Int>
+    constructor(id: Long?, name: String, lastName: String, phone: String, ager: Int?, description: String?, photoProfile: String?,
+        credentialId: Long?, credential: Login?, carModel: String, plateNumber: String, ratingNumber: Double?, available: String?, racersId: List<Int>?
     ) : this() {
         this.id = id
         this.name = name
@@ -19,6 +19,7 @@ class Driver() : User() {
         this.ager = ager
         this.description = description
         this.photoProfile = photoProfile
+        this.credential = credential
         this.credentialId = credentialId
         this.carModel = carModel
         this.plateNumber = plateNumber

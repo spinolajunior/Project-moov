@@ -69,6 +69,11 @@ class CriarContaActivity1 : AppCompatActivity() {
 
 
         }
+        binding.btnVoltarLogin.setOnClickListener {
+            val intent = Intent(this@CriarContaActivity1, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+        }
 
 
     }
