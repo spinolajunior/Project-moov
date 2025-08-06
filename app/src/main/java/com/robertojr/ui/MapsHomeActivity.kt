@@ -46,6 +46,8 @@ class MapsHomeActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -58,4 +60,6 @@ class MapsHomeActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_maps_home)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
+
 }
