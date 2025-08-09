@@ -8,9 +8,11 @@
 <fragment
     android:id="@+id/home_maps"
     android:name="com.robertojr.ui.fragment.MapsFragment"
-    android:label="home"
+    android:label="Moov"
     tools:layout="@layout/fragment_maps"
     />
 
-
+<activity android:id="@+id/config_activity"
+    android:name="com.robertojr.ui.ConfigActivity"
+    tools:layout="@layout/activity_options"/>
 </navigation>

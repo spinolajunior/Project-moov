@@ -8,7 +8,7 @@ data class Login(
     val email: String?,
 
     @SerializedName("id")
-    val id: Int? = null,
+    val id: Long? = null,
 
     @SerializedName("password")
     val password: String,

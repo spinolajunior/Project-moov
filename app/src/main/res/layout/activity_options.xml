@@ -54,19 +54,22 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/shape_input_text_login"
                 android:orientation="horizontal"
-                android:padding="15dp">
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                >
 
                 <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Alterar nome "
+                    android:text="Alterar nome :"
                     android:textColor="@color/cinza_texto"
                     android:textSize="16sp" />
 
                 <EditText
+                    android:id="@+id/edt_editar_nome"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="45dp"
                     android:background="@drawable/shape_empty"
                     android:hint="Roberto Carlos"
                     android:inputType="text"
@@ -82,19 +85,21 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/shape_input_text_login"
                 android:orientation="horizontal"
-                android:padding="15dp">
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp">
 
                 <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Alterar E-mail "
+                    android:text="Alterar E-mail :"
                     android:textColor="@color/cinza_texto"
                     android:textSize="16sp" />
 
                 <EditText
+                    android:id="@+id/edt_editar_email"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="45dp"
                     android:background="@drawable/shape_empty"
                     android:hint="juniorspinola16@gmail.com"
                     android:inputType="textEmailAddress"
@@ -110,19 +115,21 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/shape_input_text_login"
                 android:orientation="horizontal"
-                android:padding="15dp">
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp">
 
                 <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Alterar Senha "
+                    android:text="Alterar Senha :"
                     android:textColor="@color/cinza_texto"
                     android:textSize="16sp" />
 
                 <EditText
+                    android:id="@+id/edt_editar_senha"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="45dp"
                     android:background="@drawable/shape_empty"
                     android:hint="********"
                     android:inputType="textPassword"
@@ -138,19 +145,21 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/shape_input_text_login"
                 android:orientation="horizontal"
-                android:padding="15dp">
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp">
 
                 <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Confirme a Senha "
+                    android:text="Confirme a Senha :"
                     android:textColor="@color/cinza_texto"
                     android:textSize="16sp" />
 
                 <EditText
+                    android:id="@+id/edt_confirmar_senha"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="45dp"
                     android:background="@drawable/shape_empty"
                     android:hint="********"
                     android:inputType="textPassword"
@@ -166,19 +175,21 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/shape_input_text_login"
                 android:orientation="horizontal"
-                android:padding="15dp">
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp">
 
                 <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Telefone "
+                    android:text="Telefone :"
                     android:textColor="@color/cinza_texto"
                     android:textSize="16sp" />
 
                 <EditText
+                    android:id="@+id/edt_editar_phone"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="45dp"
                     android:background="@drawable/shape_empty"
                     android:hint="(75)983717345"
                     android:inputType="phone"
@@ -188,20 +199,93 @@
 
             </LinearLayout>
 
-            <TextView
+            <LinearLayout
+                android:id="@+id/ll_editar_placa"
+                android:visibility="visible"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mensagens de Error"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape_input_text_login"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Placa veiculo :"
+                    android:textColor="@color/cinza_texto"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edt_editar_placa"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/shape_empty"
+                    android:hint="teste"
+                    android:inputType="phone"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_editar_veiculo"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape_input_text_login"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modelo veiculo :"
+                    android:textColor="@color/cinza_texto"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edt_editar_veiculo"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/shape_empty"
+                    android:hint="teste"
+                    android:inputType="phone"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_mensagem_progresso"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mensagens"
                 android:textAlignment="center"
                 android:textColor="@color/azul_links"
                 android:textSize="16sp"
                 android:textStyle="bold" />
+            <ProgressBar
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:indeterminateTint="@color/amarelo_principal"
+                android:layout_gravity="center"/>
 
             <Space
                 android:layout_width="wrap_content"
-                android:layout_height="200dp" />
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginBottom="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape_button_login"

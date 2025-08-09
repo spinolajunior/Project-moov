@@ -1,10 +1,11 @@
 package com.robertojr.ui
 
+import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -13,23 +14,48 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 import com.robertojr.moov.R
 import com.robertojr.moov.databinding.ActivityMapsHomeBinding
+import com.robertojr.moov.databinding.NavHeaderMapsHomeBinding
+import com.robertojr.moov.model.RetrofitClient
+import com.robertojr.util.credentialData
 import com.robertojr.util.userSection
+import kotlinx.coroutines.launch
 
 class MapsHomeActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMapsHomeBinding
 
+
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMapsHomeBinding.inflate(layoutInflater)
+        val headerView = binding.navView.getHeaderView(0)
+        val bindingHeader = NavHeaderMapsHomeBinding.bind(headerView)
         setContentView(binding.root)
 
         setSupportActionBar(binding.appBarMapsHome.toolbar)
 
 
-            Log.d("Usuario", "Nome: ${userSection.name}, Phone ${userSection.phone} ")
+
+        lifecycleScope.launch {
+
+            val credential = RetrofitClient.loginRetrofit.findById(userSection.credentialId)
+
+            if (credential.isSuccessful){
+
+                bindingHeader.txtEmailUsuario.text = credential.body()?.email
+                credentialData = credential.body()
+            }
+
+
+        }
+
+            bindingHeader.txtNameUsuario.text = userSection.name+" "+userSection.lastName
+
+
+
 
 
 
@@ -41,7 +67,7 @@ class MapsHomeActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.home_maps
+                R.id.home_maps,R.id.config_activity
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
