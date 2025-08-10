@@ -2,13 +2,13 @@ package com.robertojr.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.robertojr.moov.databinding.ActivityLoginBinding
 import com.robertojr.moov.model.Login
 import com.robertojr.moov.model.RetrofitClient
+import com.robertojr.util.credentialData
 import com.robertojr.util.userSection
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -36,9 +36,14 @@ class LoginActivity : AppCompatActivity() {
                     )
 
                     if (tryLogin.isSuccessful ){
-                        Log.d("Resposta API","${tryLogin.body()?.name}")
+
 
                             userSection = tryLogin.body()!!
+                            val credential = RetrofitClient.loginRetrofit.findById(userSection.credentialId)
+                            if (credential.isSuccessful){
+                                credentialData = credential.body()
+                            }
+
                         launch {
                             val intent = Intent(this@LoginActivity, MapsHomeActivity::class.java)
                             startActivity(intent)
@@ -55,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
                     }
 
                 } catch (e: Exception) {
-                    Log.d("Error", "Exception")
+
                     e.printStackTrace()
                 }
             }

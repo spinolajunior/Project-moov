@@ -71,7 +71,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:background="@drawable/shape_empty"
-                    android:hint="Roberto Carlos"
                     android:inputType="text"
                     android:textAlignment="center"
                     android:textSize="16sp" />
@@ -101,7 +100,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:background="@drawable/shape_empty"
-                    android:hint="juniorspinola16@gmail.com"
+
                     android:inputType="textEmailAddress"
                     android:textAlignment="center"
                     android:textSize="16sp" />
@@ -122,16 +121,16 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Alterar Senha :"
+                    android:text="Senha atual :"
                     android:textColor="@color/cinza_texto"
                     android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/edt_editar_senha"
+                    android:id="@+id/edt_senha_atual"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:background="@drawable/shape_empty"
-                    android:hint="********"
+                    android:hint="Informe a senha atual"
                     android:inputType="textPassword"
                     android:textAlignment="center"
                     android:textSize="16sp" />
@@ -152,16 +151,16 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Confirme a Senha :"
+                    android:text="Nova senha :"
                     android:textColor="@color/cinza_texto"
                     android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/edt_confirmar_senha"
+                    android:id="@+id/edt_nova_senha"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:background="@drawable/shape_empty"
-                    android:hint="********"
+                    android:hint="Informe a nova senha"
                     android:inputType="textPassword"
                     android:textAlignment="center"
                     android:textSize="16sp" />
@@ -191,7 +190,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:background="@drawable/shape_empty"
-                    android:hint="(75)983717345"
                     android:inputType="phone"
                     android:textAlignment="center"
                     android:textSize="16sp" />
@@ -223,8 +221,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:background="@drawable/shape_empty"
-                    android:hint="teste"
-                    android:inputType="phone"
+
+                    android:inputType="text"
                     android:textAlignment="center"
                     android:textSize="16sp" />
 
@@ -255,8 +253,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:background="@drawable/shape_empty"
-                    android:hint="teste"
-                    android:inputType="phone"
+
+                    android:inputType="text"
                     android:textAlignment="center"
                     android:textSize="16sp" />
 
@@ -265,15 +263,16 @@
 
             <TextView
                 android:id="@+id/txt_mensagem_progresso"
-                android:visibility="visible"
+                android:visibility="invisible"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mensagens"
+
                 android:textAlignment="center"
                 android:textColor="@color/azul_links"
                 android:textSize="16sp"
                 android:textStyle="bold" />
             <ProgressBar
+                android:visibility="invisible"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:indeterminateTint="@color/amarelo_principal"
@@ -285,10 +284,13 @@
                 android:layout_weight="1"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_salvar"
+                android:enabled="false"
                 android:layout_marginBottom="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/shape_button_login"
+                android:backgroundTint="@color/btn_desativado"
+                android:background="@drawable/shape_button_criar_conta_login"
                 android:text="Salvar"
                 android:textColor="@color/cinza_texto" />
 

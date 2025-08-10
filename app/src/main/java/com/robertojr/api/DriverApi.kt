@@ -25,7 +25,7 @@ interface DriverApi {
     suspend fun insert(@Body driver: Driver): Response<Driver>
 
     @PUT("drivers/{id}")
-    suspend fun updateById(@Body driver: Driver, @Path("id") id: Long): Call<Driver>
+    suspend fun updateById(@Body driver: Driver, @Path("id") id: Long?): Response<Driver>
 
     @DELETE("drivers/{id}")
     suspend fun deleteById(@Path("id") id: Long): Call<Driver>

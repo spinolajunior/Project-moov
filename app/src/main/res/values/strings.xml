@@ -7,7 +7,28 @@
     <string name="previous">Previous</string>
     <string name="cadastrar">Cadastrar</string>
     <string name="falhaLogin">Usuario ou senha invalido!</string>
-    <string name="campoIncompleto">Por favor, complete o campo corretamente</string>
+
+
+    <string name="error_nome_invalido">O nome inserido é inválido. Ele deve conter apenas letras e ter no mínimo duas letras por palavra.</string>
+    <string name="guide_nome">Exemplo: João da Silva</string>
+
+    <string name="error_email_invalido">O e-mail inserido é inválido. Por favor, verifique o formato.</string>
+    <string name="guide_email">Exemplo: seu.nome@exemplo.com</string>
+
+    <string name="error_phone_invalido">O número de telefone é inválido. Por favor, verifique o formato.</string>
+    <string name="guide_phone">Exemplo: (11) 91234–5678 ou 11912345678</string>
+
+    <string name="error_senha_invalida">A nova senha é inválida. Ela deve ser diferente da senha atual, ter no mínimo 8 caracteres, com pelo menos uma letra maiúscula, uma minúscula, um número e um caractere especial.</string>
+    <string name="guide_senha">Exemplo: MinhaSenha#123</string>
+    <string name="error_senha_atual">A senha atual está incorreta.</string>
+
+    <string name="error_placa_invalida">A placa de carro é inválida. Por favor, verifique o formato.</string>
+    <string name="guide_placa">Use o formato antigo (ABC1234) ou o novo padrão Mercosul (ABC1C34).</string>
+
+    <string name="error_nome_carro_invalido">O nome do carro é inválido.</string>
+    <string name="guide_nome_carro">Deve conter no mínimo 2 dígitos e não pode ter caracteres especiais, hífens duplos (–) ou terminar com hífen. Exemplo: BMW 320d</string>
+
+    <string name="campoIncompleto">Este campo está incompleto</string>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
