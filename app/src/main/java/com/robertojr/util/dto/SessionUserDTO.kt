@@ -9,7 +9,7 @@ data class SessionUserDTO(
     val carModel: String?,
     val credentialId: Long,
     val description: String?,
-    val id: Long?,
+    val id: Long,
     val lastName: String?,
     val name: String?,
     val phone: String?,

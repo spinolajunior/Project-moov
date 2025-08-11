@@ -32,6 +32,7 @@ class MapsHomeActivity : AppCompatActivity() {
         val bindingHeader = NavHeaderMapsHomeBinding.bind(headerView)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
         setSupportActionBar(binding.appBarMapsHome.toolbar)
 
 
