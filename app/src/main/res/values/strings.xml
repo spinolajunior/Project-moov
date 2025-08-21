@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Moov</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="falhaLogin">Usuário ou senha inválido!</string>
+
+    <string name="error_nome_invalido">O nome inserido é inválido. Ele deve conter apenas letras e ter no mínimo duas letras por palavra.</string>
+    <string name="guide_nome">Exemplo: João da Silva</string>
+
+    <string name="error_email_invalido">O e-mail inserido é inválido. Por favor, verifique o formato.</string>
+    <string name="guide_email">Exemplo: seu.nome@exemplo.com</string>
+
+    <string name="error_phone_invalido">O número de telefone é inválido. Por favor, verifique o formato.</string>
+    <string name="guide_phone">Exemplo: (11) 91234–5678 ou 11912345678</string>
+
+    <string name="error_senha_invalida">A nova senha é inválida. Ela deve ser diferente da senha atual, ter no mínimo 8 caracteres, com pelo menos uma letra maiúscula, uma minúscula, um número e um caractere especial.</string>
+    <string name="guide_senha">Exemplo: MinhaSenha#123</string>
+    <string name="error_senha_atual">A senha atual está incorreta.</string>
+
+    <string name="error_placa_invalida">A placa de carro é inválida. Por favor, verifique o formato.</string>
+    <string name="guide_placa">Use o formato antigo (ABC1234) ou o novo padrão Mercosul (ABC1C34).</string>
+
+    <string name="error_nome_carro_invalido">O nome do carro é inválido.</string>
+    <string name="guide_nome_carro">Deve conter no mínimo 2 dígitos e não pode ter caracteres especiais, hífens duplos (–) ou terminar com hífen. Exemplo: BMW 320d</string>
+
+    <string name="campoIncompleto">Este campo está incompleto</string>
+
+    <string name="error_usuario_invalido">O usuário deve conter de 3 a 20 caracteres, incluindo letras, números, ponto, hífen e underline.</string>
+    <string name="error_senha_invalida_cadastro">A senha deve ter entre 8 e 15 caracteres, com pelo menos uma letra maiúscula, uma minúscula, um número e um caractere especial (@#$%^&amp;+=!).</string>
+    <string name="error_senhas_nao_conferem">As senhas não conferem. Por favor, digite novamente.</string>
+
+    <string name="title_activity_maps_home">MapsHomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+</resources>

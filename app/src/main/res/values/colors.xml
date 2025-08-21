@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">@color/amarelo_translucido</color>
+    <color name="purple_500">@color/amarelo_translucido</color>
+    <color name="purple_700">@color/amarelo_translucido</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="amarelo_principal">#FFD038</color>
+    <color name="amarelo_translucido">#A6FFD038</color>
+    <color name="amarelo_escuro">#FFA000</color>
+    <color name="cinza_texto">#212121</color>
+    <color name="cinza_fundo_card">#F5F5F5</color>
+    <color name="azul_links">#455A64</color>
+    <color name="translucido">#2A0D0C0C</color>
+    <color name="btn_desativado">#CCCCCC</color>
+</resources>

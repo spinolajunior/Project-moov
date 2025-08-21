@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.robertojr.ui.CriarContaActivity2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/shape_tela_top"
+        android:paddingLeft="12dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Crie uma conta"
+            android:textColor="@color/cinza_texto"
+            android:textSize="35dp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Nome"
+            android:textColor="@color/cinza_texto" />
+
+        <EditText
+            android:id="@+id/edt_nome_cadastro"
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_input_text_login"
+            android:hint="Nome"
+            android:paddingStart="10dp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+
+            android:text="Sobrenome"
+            android:textColor="@color/cinza_texto" />
+
+        <EditText
+            android:id="@+id/edt_sobrenome"
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_input_text_login"
+            android:hint="Sobrenome"
+            android:paddingStart="10dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Telefone"
+            android:textColor="@color/cinza_texto" />
+
+        <EditText
+            android:id="@+id/edt_phone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="phone"
+            android:background="@drawable/shape_input_text_login"
+            android:hint="(DD)9NNNN-NNNN"
+
+            android:paddingStart="10dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Data de nascimento"
+            android:textColor="@color/cinza_texto" />
+
+        <EditText
+            android:id="@+id/edt_data_nascimento"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="date"
+            android:background="@drawable/shape_input_text_login"
+            android:hint="dd/mm/aaaa"
+            android:paddingStart="10dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_criar_conta_avancar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="avançar"
+            android:backgroundTint="@color/btn_desativado"
+            android:background="@drawable/shape_button_criar_conta_login"
+            android:textSize="16sp"
+            android:textStyle="normal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Já possui uma conta?"
+                android:textAllCaps="true"
+                android:textColor="@color/cinza_texto" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_voltar_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:textSize="16sp"
+                android:background="@drawable/shape_button_criar_conta_login"
+                android:text="Entrar" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
