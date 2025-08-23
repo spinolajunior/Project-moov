@@ -10,16 +10,24 @@
             android:icon="@drawable/home_icon"
             android:title="Inicio" />
         <item
-            android:id="@+id/historico_activity"
-            android:icon="@drawable/history_icon"
-            android:title="Historico" />
-        <item
             android:id="@+id/config_activity"
             android:icon="@drawable/configuracao"
             android:title="Configuração" />
         <item
+            android:id="@+id/historico_activity"
+            android:icon="@drawable/history_icon"
+            android:title="Historico" />
+
+        <item
+            android:id="@+id/cadastrar_corrida"
+            android:icon="@drawable/gerenciar"
+            android:title="Gerenciamento" />
+        <item
             android:id="@+id/log_out"
             android:icon="@drawable/sair"
             android:title="Sair" />
+
+
+
     </group>
 </menu>

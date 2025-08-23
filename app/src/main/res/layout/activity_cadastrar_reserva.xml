@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/amarelo_principal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <ImageButton
+                android:id="@+id/btn_voltar"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/button_back" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Reservar Viagem"
+                android:textAlignment="center"
+                android:textColor="@color/cinza_texto"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="28dp"
+                android:layout_height="28dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_backgroud_config"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <!-- Informações da Viagem -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Informações da Viagem"
+                android:textColor="@color/cinza_texto"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Origem -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Origem:"
+                    android:textColor="@color/cinza_texto"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="8dp"/>
+                <TextView
+                    android:id="@+id/txt_origem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="São Paulo"
+                    android:textColor="@color/cinza_texto"/>
+            </LinearLayout>
+
+            <!-- Destino -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Destino:"
+                    android:textColor="@color/cinza_texto"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="8dp"/>
+                <TextView
+                    android:id="@+id/txt_destino"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rio de Janeiro"
+                    android:textColor="@color/cinza_texto"/>
+            </LinearLayout>
+
+            <!-- Valor por vaga -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Valor por vaga:"
+                    android:textColor="@color/cinza_texto"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="8dp"/>
+                <TextView
+                    android:id="@+id/txt_valor_vaga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="R$ 50,00"
+                    android:textColor="@color/cinza_texto"/>
+            </LinearLayout>
+
+            <!-- Vagas disponíveis -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vagas disponíveis:"
+                    android:textColor="@color/cinza_texto"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="8dp"/>
+                <TextView
+                    android:id="@+id/txt_vagas_disponiveis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textColor="@color/cinza_texto"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Descrição:"
+                    android:textColor="@color/cinza_texto"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="8dp"/>
+                <TextView
+                    android:id="@+id/txt_descricao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/error_usuario_invalido"
+                    android:textColor="@color/cinza_texto"/>
+            </LinearLayout>
+
+            <!-- Separador -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cinza_texto"
+                android:alpha="0.3"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Sua Reserva -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sua Reserva"
+                android:textColor="@color/cinza_texto"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Quantidade de vagas -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vagas desejadas:"
+                    android:textColor="@color/cinza_texto"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="8dp"/>
+                <EditText
+                    android:id="@+id/edt_vagas_desejadas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="ex = 1"
+                    android:textAlignment="center"
+                    />
+            </LinearLayout>
+
+            <!-- Valor total -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Valor total:"
+                    android:textColor="@color/cinza_texto"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="8dp"/>
+                <TextView
+                    android:id="@+id/txt_valor_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="R$"
+                    android:textColor="@color/cinza_texto"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Botão de reservar -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_reservar"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/amarelo_principal"
+                android:background="@drawable/shape_button_criar_conta_login"
+                android:text="Reservar"
+                android:textColor="@color/cinza_texto"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <com.here.sdk.mapview.MapView
+                android:id="@+id/map_view_cadastro_reserva"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

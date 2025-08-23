@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
-
-
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-
     <application
+        android:name=".model.HereMaps"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -20,7 +19,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Moov">
+        <activity
+            android:name="com.robertojr.ui.CadastrarReservaActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.robertojr.ui.CadastrarCorridaActivity"
+            android:exported="false" />
 
+        <meta-data
+            android:name="com.here.android.maps.appid"
+            android:value="cUVFKiPr3SZDIhSdAYOm" />
+        <meta-data
+            android:name="com.here.android.maps.apptoken"
+            android:value="rQK8GONmyqRWegC0XSUCyFEZUuM2sFO-ZuG3yD1GAVE" />
 
         <activity
             android:name="com.robertojr.ui.HistoricoActivity"
@@ -28,23 +39,11 @@
         <activity
             android:name="com.robertojr.ui.ConfigActivity"
             android:exported="false" />
-
-
-        <meta-data
-            android:name="com.here.android.maps.appid"
-            android:value="cUVFKiPr3SZDIhSdAYOm" />
-
-
-        <meta-data
-            android:name="com.here.android.maps.apptoken"
-            android:value="rQK8GONmyqRWegC0XSUCyFEZUuM2sFO-ZuG3yD1GAVE" />
-
         <activity
             android:name="com.robertojr.ui.MapsHomeActivity"
             android:exported="false"
             android:label="@string/title_activity_maps_home"
             android:theme="@style/Theme.Moov.NoActionBar" />
-
         <activity
             android:name="com.robertojr.ui.CriarContaActivity3"
             android:exported="false" />
@@ -54,23 +53,18 @@
         <activity
             android:name="com.robertojr.ui.CriarContaActivity1"
             android:exported="false" />
-
-
         <activity
             android:name="com.robertojr.ui.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
-
         <activity
             android:name="com.robertojr.ui.LoginActivity"
             android:exported="true" />
-
     </application>
 
 </manifest>

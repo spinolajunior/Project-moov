@@ -21,4 +21,8 @@
         android:name="com.robertojr.ui.HistoricoActivity"
         tools:layout="@layout/activity_historico"/>
 
+    <activity android:id="@+id/cadastrar_corrida"
+        android:name="com.robertojr.ui.CadastrarCorridaActivity"
+        tools:layout="@layout/activity_cadastrar_corrida"/>
+
 </navigation>

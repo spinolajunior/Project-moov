@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/amarelo_principal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <ImageButton
+                android:id="@+id/btn_voltar"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/button_back" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cadastrar Corrida"
+                android:textAlignment="center"
+                android:textColor="@color/cinza_texto"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="28dp"
+                android:layout_height="28dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_backgroud_config"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/etOrigin"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Origem"
+                    android:padding="7dp"
+                    android:inputType="textCapWords"
+                    android:background="@drawable/shape_input_text_login"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/etDestination"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Destino"
+                    android:padding="7dp"
+                    android:background="@drawable/shape_input_text_login"
+                    android:inputType="textCapWords"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="vertical">
+                    <EditText
+                        android:id="@+id/etVacancies"
+                        android:background="@drawable/shape_input_text_login"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:hint="Vagas"
+                        android:padding="7dp"
+                        android:inputType="number"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <EditText
+                        android:background="@drawable/shape_input_text_login"
+                        android:padding="7dp"
+                        android:id="@+id/etPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Preço por vaga"
+                        android:inputType="numberDecimal"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/edt_data_corrida"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="datetime"
+                    android:padding="7dp"
+                    android:hint="Data hora ex = 29/11/1999 13:00:00"
+                    android:textAlignment="center"
+                    android:background="@drawable/shape_input_text_login"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="0dp"
+                    android:textColor="@color/cinza_texto"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="Cancelar"/>
+
+                <Button
+                    android:id="@+id/btnConfirmTrip"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/cinza_texto"
+                    android:textStyle="bold"
+                    android:text="Criar Viagem"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_mensagem_progresso"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/azul_links"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.here.sdk.mapview.MapView
+                android:id="@+id/map_view_cadastro_viagem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
