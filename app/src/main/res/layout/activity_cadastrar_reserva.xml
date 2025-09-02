@@ -17,6 +17,7 @@
             android:padding="15dp">
 
             <ImageButton
+                android:background="@color/transparente"
                 android:id="@+id/btn_voltar"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
@@ -71,7 +72,7 @@
                     android:id="@+id/txt_origem"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="São Paulo"
+
                     android:textColor="@color/cinza_texto"/>
             </LinearLayout>
 
@@ -92,7 +93,7 @@
                     android:id="@+id/txt_destino"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Rio de Janeiro"
+
                     android:textColor="@color/cinza_texto"/>
             </LinearLayout>
 
@@ -113,7 +114,7 @@
                     android:id="@+id/txt_valor_vaga"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="R$ 50,00"
+
                     android:textColor="@color/cinza_texto"/>
             </LinearLayout>
 
@@ -134,7 +135,7 @@
                     android:id="@+id/txt_vagas_disponiveis"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="3"
+
                     android:textColor="@color/cinza_texto"/>
             </LinearLayout>
             <LinearLayout
@@ -153,7 +154,7 @@
                     android:id="@+id/txt_descricao"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/error_usuario_invalido"
+
                     android:textColor="@color/cinza_texto"/>
             </LinearLayout>
 
@@ -223,6 +224,7 @@
 
             <!-- Botão de reservar -->
             <androidx.appcompat.widget.AppCompatButton
+
                 android:id="@+id/btn_reservar"
                 android:layout_marginBottom="10dp"
                 android:layout_width="match_parent"
@@ -234,10 +236,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"/>
 
-            <com.here.sdk.mapview.MapView
-                android:id="@+id/map_view_cadastro_reserva"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+
 
         </LinearLayout>
     </LinearLayout>

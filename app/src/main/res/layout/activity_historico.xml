@@ -19,6 +19,7 @@
 
             <ImageButton
                 android:id="@+id/btn_voltar"
+                android:background="@color/transparente"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:src="@drawable/button_back" />

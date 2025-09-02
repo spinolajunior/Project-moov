@@ -18,12 +18,14 @@
             android:padding="15dp">
 
             <ImageButton
+                android:background="@color/transparente"
                 android:id="@+id/btn_voltar"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:src="@drawable/button_back" />
 
             <TextView
+
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

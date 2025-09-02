@@ -2,11 +2,11 @@ package com.robertojr.moov.model
 
 class Customer() : User() {
 
-    var reserves: List<Long>? = null
+    var reserves: List<Reserve>? = null
 
     constructor(
         id: Long?, name: String, lastName: String, ager: Int?, credentialId: Long?, credential: Login?,
-        phone: String?, photoProfile: String?, description: String?, reserves: List<Long>?
+        phone: String?, photoProfile: String?, description: String?, reserves: List<Reserve>?
     ) : this() {
         this.id = id
         this.name = name

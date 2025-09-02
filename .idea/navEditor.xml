@@ -8,7 +8,7 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="cadastrar_corrida">
+                  <entry key="config_activity">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -20,7 +20,7 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="config_activity">
+                  <entry key="gerenciar">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">

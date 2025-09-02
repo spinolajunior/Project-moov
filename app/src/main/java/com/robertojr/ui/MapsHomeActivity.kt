@@ -37,9 +37,10 @@ class MapsHomeActivity : AppCompatActivity() {
         setSupportActionBar(binding.appBarMapsHome.toolbar)
 
 
+
         bindingHeader.txtEmailUsuario.text = credentialData?.email
 
-        bindingHeader.txtNameUsuario.text = userSection?.name + " " + userSection?.lastName
+        bindingHeader.txtNameUsuario.text = userSection.name + " " + userSection.lastName
 
 
         val drawerLayout: DrawerLayout = binding.drawerLayout

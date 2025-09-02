@@ -2,7 +2,8 @@ package com.robertojr.api
 
 
 import com.robertojr.moov.model.Reserve
-import retrofit2.Call
+import com.robertojr.moov.model.sending.ReserveSending
+import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.DELETE
 
@@ -14,17 +15,17 @@ import retrofit2.http.Path
 interface ReserveApi {
 
     @GET("reserves")
-    suspend fun findAll() : List<Reserve>
+    suspend fun findAll() : Response<List<Reserve>>
 
     @GET("reserves/{id}")
-    suspend fun findById(@Path("id") id: Long) : Call<Reserve>
+    suspend fun findById(@Path("id") id: Long) : Response<Reserve>
 
     @POST("reserves")
-    suspend fun insert(@Body login:Reserve): Call<Reserve>
+    suspend fun insert(@Body reserve: ReserveSending): Response<Reserve>
 
     @PUT("reserves/{id}")
-    suspend fun updateById(@Body login:Reserve , @Path("id") id:Long): Call<Reserve>
+    suspend fun updateById(@Body reserve:Reserve , @Path("id") id:Long): Response<Reserve>
 
     @DELETE("reserves/{id}")
-    suspend fun deleteById(@Path("id") id:Long): Call<Reserve>
+    suspend fun deleteById(@Path("id") id:Long): Response<Reserve>
 }

@@ -15,4 +15,5 @@
     <color name="azul_links">#455A64</color>
     <color name="translucido">#2A0D0C0C</color>
     <color name="btn_desativado">#CCCCCC</color>
+    <color name="transparente">#00FFFFFF</color>
 </resources>

@@ -19,6 +19,15 @@
         android:orientation="vertical"
         android:padding="15dp">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:textColor="@color/amarelo_principal"
+            android:textAlignment="center"
+            android:textSize="50dp"
+            android:textStyle="bold"/>
+
         <ImageView
             android:layout_width="200dp"
             android:layout_height="200dp"

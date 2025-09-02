@@ -20,6 +20,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Moov">
         <activity
+            android:name="com.robertojr.ui.CorridasActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.robertojr.ui.ReservasActivity"
+            android:exported="false" />
+        <activity
             android:name="com.robertojr.ui.CadastrarReservaActivity"
             android:exported="false" />
         <activity

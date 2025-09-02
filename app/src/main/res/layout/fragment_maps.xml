@@ -9,17 +9,47 @@
     <com.here.sdk.mapview.MapView
         android:id="@+id/map_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        >
 
-    <!-- Botão flutuante -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabAddTrip"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        app:srcCompat="@drawable/ic_add"
-        android:contentDescription="Cadastrar viagem" />
+        <ImageView
+            android:id="@+id/btn_sync"
+            android:layout_marginTop="10dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/sync"
+            android:layout_gravity="right"
+            android:padding="10dp"/>
+
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:layout_marginBottom="10dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cadastrar_corrida"
+                android:background="@drawable/shape_button_login"
+                android:layout_width="match_parent"
+               android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="Cadastrar corrida"
+                android:textColor="@color/cinza_texto"
+                android:textSize="18sp"
+                android:drawableRight="@drawable/map_btn"
+                android:paddingRight="50dp"
+
+                />
+
+
+        </LinearLayout>
+
+    </com.here.sdk.mapview.MapView>
+
+
 
 
 

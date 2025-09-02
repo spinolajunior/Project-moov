@@ -1,10 +1,10 @@
 package com.robertojr.moov.model
 
 data class Reserve(
-    val customerId: Int,
+    val customerId: Long,
     val dataReserve: String,
-    val id: Int,
-    val racerId: Int,
+    val id: Long?,
+    val racerId: Long?,
     val vacancy: Int
 
 
